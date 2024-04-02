@@ -1,4 +1,5 @@
 package org.example;
+
 import org.springframework.stereotype.Service;
 import ru.netology.repository.UserRepository;
 
