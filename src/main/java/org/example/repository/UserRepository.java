@@ -1,4 +1,4 @@
-package org.example;
+package org.example.repository;
 
 import org.springframework.stereotype.Repository;
 import ru.netology.model.Authorities;
