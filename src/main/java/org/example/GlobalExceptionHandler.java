@@ -10,12 +10,12 @@ import org.springframework.web.context.request.WebRequest;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(InvalidCredentials.class)
-    public ResponseEntity<Object> handleInvalidCredentialsException(InvalidCredentials ex, WebRequest request) {
+    public ResponseEntity<Object> handleInvalidCredentialsException(final InvalidCredentials ex, final WebRequest request) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
     }
 
     @ExceptionHandler(UnauthorizedUser.class)
-    public ResponseEntity<Object> handleUnauthorizedUserException(UnauthorizedUser ex, WebRequest request) {
+    public ResponseEntity<Object> handleUnauthorizedUserException(final UnauthorizedUser ex, final WebRequest request) {
         System.out.println("Unauthorized user: " + ex.getMessage());
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(ex.getMessage());
     }
