@@ -9,11 +9,15 @@ import java.util.List;
 
 @RestController
 public class AuthorizationController {
+    private final AuthorizationService service;
+    
     @Autowired
-    private AuthorizationService service;
+    public AuthorizationController(AuthorizationService service) {
+        this.service = service;
+    }
 
     @GetMapping("/authorize")
-    public List<Authorities> getAuthorities(@RequestParam("user") String user, @RequestParam("password") String password) {
+    private List<Authorities> getAuthorities(@RequestParam("user") String user, @RequestParam("password") String password) {
         return service.getAuthorities(user, password);
     }
 }

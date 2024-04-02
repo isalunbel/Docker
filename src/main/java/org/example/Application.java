@@ -13,12 +13,12 @@ public class Application {
     }
 
     @Bean
-    public UserRepository userRepository() {
+    private UserRepository userRepository() {
         return new UserRepository();
     }
 
     @Bean
-    public AuthorizationService authorizationService(UserRepository userRepository) {
+    private AuthorizationService authorizationService(final UserRepository userRepository) {
         return new AuthorizationService(userRepository);
     }
 }
