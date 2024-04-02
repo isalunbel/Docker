@@ -1,5 +1,7 @@
-package org.example;
+package org.example.controller;
 
+import org.example.model.InvalidCredentials;
+import org.example.model.UnauthorizedUser;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
